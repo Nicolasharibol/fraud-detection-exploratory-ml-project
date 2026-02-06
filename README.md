@@ -1,53 +1,42 @@
 # Fraud Detection – Exploratory Machine Learning Project
 
 ## Project Overview
-This project explores a fraud detection problem using classical machine learning models.
-The goal is not to build a production-ready system, but to deeply understand how different
-classification models behave in the context of an imbalanced dataset.
+End-to-end machine learning project focused on detecting fraudulent credit card transactions in a highly imbalanced dataset.
+The project emphasizes model evaluation, trade-off analysis, and justified model selection, rather than accuracy alone.
 
-All analysis, reasoning, and results are fully documented inside the Jupyter Notebook.
+All work is documented in a single Jupyter Notebook, following a clean, reproducible workflow.
 
 ## Problem Statement
-Fraud detection is a binary classification problem where the positive class (fraud)
-is rare. This makes model evaluation non-trivial, as high accuracy can be misleading.
-The project focuses on understanding trade-offs between recall, precision, and F1-score.
+Fraud detection is an imbalanced binary classification problem where:
 
-## Dataset
-- Tabular dataset with numerical features
-- Strong class imbalance
-- Target variable indicates fraudulent vs non-fraudulent transactions
+- Fraud cases are rare
+- False Negatives are more costly than False Positives
 
-## Approach
-The project follows a notebook-driven, exploratory workflow:
-1. Data exploration and understanding
-2. Data preprocessing (scaling, encoding where necessary)
-3. Model training using multiple classification algorithms
-4. Evaluation using appropriate metrics for imbalanced data
-5. Model comparison and interpretation
+Model evaluation is therefore centered on recall, confusion matrix analysis, and ROC-AUC.
 
-## Models Used
-- Logistic Regression (baseline, interpretability)
-- Random Forest Classifier (ensemble learning)
-- CatBoost Classifier (gradient boosting with strong generalization)
-- LightGBM Classifier (efficient gradient boosting)
+## Models Trained
+- Logistic Regression – interpretable baseline
+- Random Forest Classifier – non-linear ensemble model
+- CatBoost Classifier – gradient boosting with strong class separation
+- LightGBM Classifier – efficient gradient boosting framework
 
-The purpose of using multiple models is to understand their behavior and limitations,
-not to optimize for maximum performance.
+All models were trained and evaluated using the same data split and metrics.
 
-## Evaluation Metrics
-Given the imbalance of the dataset, evaluation focuses on:
-- Precision
-- Recall
-- F1-score
+## Evaluation and Results 
+Models were compared using:
+
+- Precision, Recall, F1-score
 - Confusion Matrix
+- ROC-AUC score (numerical comparison)
 
-Accuracy is reported but not used as the primary decision metric.
+➡️ Random Forest was selected as the final model, as it provided the best balance between False Negatives and False Positives, aligning with the business objective of minimizing missed fraud.
 
-## Key Learnings
-- Why accuracy is unreliable for fraud detection
-- How different models react to class imbalance
-- Trade-offs between interpretability and performance
-- Importance of metric selection based on business context
+## Key Skills Demonstrated 
+- Key Skills Demonstrated
+- Imbalanced classification handling
+- Model comparison and selection
+- Business-driven evaluation metrics
+- Ensemble learning (bagging & boosting)
 
 ## Future Improvements
 - Hyperparameter tuning
@@ -55,8 +44,3 @@ Accuracy is reported but not used as the primary decision metric.
 - Cost-sensitive learning
 - Advanced ensemble methods (e.g., gradient boosting)
 - Feature engineering informed by domain knowledge
-
-## How to Run
-1. Clone the repository
-2. Install dependencies
-3. Open the notebook and run cells sequentially
