@@ -32,7 +32,6 @@ Models were compared using:
 ➡️ Random Forest was selected as the final model, as it provided the best balance between False Negatives and False Positives, aligning with the business objective of minimizing missed fraud.
 
 ## Key Skills Demonstrated 
-- Key Skills Demonstrated
 - Imbalanced classification handling
 - Model comparison and selection
 - Business-driven evaluation metrics
